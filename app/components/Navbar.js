@@ -63,6 +63,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-base font-medium">
+        <li><Link href="/labs" className="nav-link">Labs</Link></li>
           <li className="group relative">
             <Link href="/outreach" className="nav-link">Outreach Portal</Link>
             {/* Dropdown */}
