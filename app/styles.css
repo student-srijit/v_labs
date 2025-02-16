@@ -62,7 +62,7 @@ body {
   
   /* Description */
   .glassmorphic-description {
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 1.125rem;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.75rem;
@@ -70,7 +70,7 @@ body {
   
   /* Scrolling Text */
   .scrolling-text {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     font-size: 1.125rem;
     font-weight: 500;
     color: white;
