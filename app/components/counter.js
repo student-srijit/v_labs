@@ -16,7 +16,7 @@ const Counter = () => {
   return (
     <div className="counter-container">
       <div className="counter-content">
-        <h1 className="vlabs-header text-5xl">VLABS OUTREACH</h1>
+        <h1 className="vlabs-header text-5xl">VLabs Outreach</h1>
 
         {/* Counter Section */}
         <div className="counter-box">

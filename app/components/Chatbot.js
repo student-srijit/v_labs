@@ -40,7 +40,7 @@ export default function Chatbot() {
         <div className="chatbot-container">
           <div className="chatbot-header">
             <span>Chat with us</span>
-            <button className="close-button" onClick={toggleChat}>X</button>
+            <button className="close-button" onClick={toggleChat}>x</button>
           </div>
           <div className="chatbot-body">
           <Image src="/chatbot_img.jpg" alt="Chatbot" width={150} height={150} className="m-auto" />

@@ -18,7 +18,6 @@
   /* Stylized Header */
   .vlabs-header {
     font-weight: 800;
-    text-transform: uppercase;
     color: transparent;
     background: linear-gradient(90deg, #000000, #034152);
     background-clip: text;

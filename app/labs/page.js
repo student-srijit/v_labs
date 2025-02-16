@@ -73,7 +73,7 @@ const CSEngineering = () => {
                 <div className="lab-card-front">
                 <h3 
                 className={`lab-title ${lab.title === "Computer Organization Lab" ? "clickable" : ""}`} 
-                onClick={() => lab.title === "Computer Organization Lab" && router.push("/labs/cse")}
+                onClick={() => lab.title === "Computer Organization Lab" && router.push("/cse")}
                 >
                 {lab.title}
                 </h3>

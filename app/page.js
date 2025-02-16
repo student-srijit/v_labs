@@ -13,7 +13,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("objectives");
   const backgroundImages = [
     "virtual-network.jpg",
-    "car-image.jpg",
+    "car-image.png",
     "vlab-network.jpg"
   ]; 
   const [currentImage, setCurrentImage] = useState(0);

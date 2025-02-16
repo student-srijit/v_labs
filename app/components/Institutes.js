@@ -60,8 +60,9 @@ const Institutes = () => {
 
                 {/* Back Side */}
                 <div className="card-back">
-                  <p className="text-center text-lg">{institute.fact}</p>
+                  <p className="text-center text-lg whitespace-normal break-words">{institute.fact}</p>
                 </div>
+
               </div>
 
               {/* Glow Effect */}
