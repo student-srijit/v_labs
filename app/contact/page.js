@@ -84,7 +84,7 @@ const Contact = () => {
         <h2 className="map-title">Find Us on Google Maps</h2>
         <iframe
           title="Google Map Location"
-          src="https://www.google.com/maps?q=28.545955,77.18614&hl=en&z=17&output=embed"
+          src="https://www.google.com/maps?q=28.5458982,77.185786&hl=en&z=17&output=embed"
           allowFullScreen=""
           loading="lazy"
           className="map-frame"

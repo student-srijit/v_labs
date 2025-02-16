@@ -1,6 +1,7 @@
 /* Main Counter Container */
 .counter-container {
     padding: 2rem;
+    padding-bottom: 1rem;
     max-width: 1000px;
     margin: 0 auto 20px;
     overflow: hidden;
@@ -16,11 +17,10 @@
   
   /* Stylized Header */
   .vlabs-header {
-    font-size: 3rem;
     font-weight: 800;
     text-transform: uppercase;
     color: transparent;
-    background: linear-gradient(90deg, #007bff, #00c6ff);
+    background: linear-gradient(90deg, #000000, #034152);
     background-clip: text;
     -webkit-background-clip: text;
     display: inline-block;

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaComments } from "react-icons/fa"; // You can use any icon you like
 import './Chatbot.css'
 import { FaPaperPlane } from "react-icons/fa"; // Send icon
+import Image from "next/image";
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,8 @@ export default function Chatbot() {
             <button className="close-button" onClick={toggleChat}>X</button>
           </div>
           <div className="chatbot-body">
-            <input
+          <Image src="/chatbot_img.jpg" alt="Chatbot" width={150} height={150} className="m-auto" />
+          <input
               type="text"
               value={message}
               onChange={(e) => setMessage(e.target.value)}

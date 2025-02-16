@@ -71,13 +71,12 @@ export default function Home() {
       <span className="scrolling-content">
         Explore Virtual Labs • Experiment Anywhere • Learn Beyond Limits • Innovate Freely
       </span>
-  </div>
-
+    </div>
 
     <div className="search-bar">
       <input type="text" placeholder="Search for labs..." className="search-input" />
       <button className="search-button">
-        <MagnifyingGlassIcon className="search-icon" /> 
+        <MagnifyingGlassIcon className="search-icon" />
       </button>
     </div>
 
@@ -109,7 +108,6 @@ export default function Home() {
     </div>
   </div>
 </div>
-
 
       {/* Additional Sections */}
       <BroadAreasSection />

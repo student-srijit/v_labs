@@ -1,0 +1,112 @@
+/* 🌟 Overall Page Layout */
+.cse-page {
+    display: flex;
+    height: 100vh;
+    background: #111;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* 📌 Left Side Navbar */
+.side-navbar {
+    width: 240px;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e1e, #333);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 8%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* 🎯 Navbar Items */
+.nav-item {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #222;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: #ff5733;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 12px rgba(255, 87, 51, 0.6);
+}
+
+/* ✅ Right Content Area (Fixes Overlapping Issue) */
+.content-area {
+    flex: 1; /* Takes up remaining space */
+    padding: 40px;
+    margin-left: 240px; /* Content starts AFTER the navbar */
+    margin-top: 80px; /* Push content DOWN to avoid overlapping */
+    width: calc(100% - 240px);
+    height: calc(100vh - 80px); /* Adjust height to fit */
+    overflow-y: auto;
+}
+
+/* 🎨 Content Box Styling */
+.content-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🛠️ Header Styling (Properly Spaced) */
+.content-area h2 {
+    color: #ff5733;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* 📝 Text Content */
+.content-box p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 🎯 Responsive Design (For Smaller Screens) */
+@media (max-width: 768px) {
+    .side-navbar {
+        width: 200px;
+    }
+
+    .content-area {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        margin-top: 100px; /* Push content further for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .side-navbar {
+        width: 160px;
+    }
+
+    .content-area {
+        margin-left: 160px;
+        width: calc(100% - 160px);
+        margin-top: 120px; /* Push even more for small screens */
+    }
+
+    .nav-item {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

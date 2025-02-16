@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [loading, setLoading] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Scroll Effect for Navbar
   useEffect(() => {
@@ -44,7 +45,7 @@ const Navbar = () => {
 
       <nav
         className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[92%] md:w-[80%] px-6 py-4 rounded-2xl z-50 transition-all duration-500 flex items-center justify-between 
-          bg-white bg-opacity-95 shadow-md backdrop-blur-xl`}
+          bg-white bg-opacity-95 shadow-md backdrop-blur-xl ${isScrolled ? "shadow-lg" : ""}`}
       >
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-4">
@@ -63,13 +64,12 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-base font-medium">
-        <li><Link href="/labs" className="nav-link">Labs</Link></li>
+          <li><Link href="/labs" className="nav-link">Labs</Link></li>
           <li className="group relative">
             <Link href="/outreach" className="nav-link">Outreach Portal</Link>
             {/* Dropdown */}
             <div className="absolute left-0 mt-1 w-52 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 scale-90 group-hover:scale-100 z-10">
               <ul className="py-2 text-gray-700">
-                <li><Link href="/partnerships" className="dropdown-item">Partnerships</Link></li>
                 <li><Link href="/webinars" className="dropdown-item">Webinars</Link></li>
                 <li><Link href="/events" className="dropdown-item">Events</Link></li>
               </ul>
@@ -88,8 +88,22 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-white shadow-lg md:hidden flex flex-col items-center py-4 space-y-4 rounded-b-lg">
+          <div className="absolute top-16 left-0 w-full bg-white shadow-lg md:hidden flex flex-col items-center py-4 space-y-4 rounded-b-lg z-40">
+            <Link href="/labs" className="mobile-nav-link">Labs</Link> {/* Labs in mobile menu */}
             <Link href="/outreach" className="mobile-nav-link">Outreach Portal</Link>
+            {/* Mobile Dropdown for Outreach */}
+            <button 
+              onClick={() => setDropdownOpen(!dropdownOpen)} 
+              className="mobile-nav-link w-full text-left"
+            >
+              Outreach Portal Options
+            </button>
+            {dropdownOpen && (
+              <div className="w-full bg-white shadow-lg mt-2 rounded-lg">
+                <Link href="/webinars" className="dropdown-item">Webinars</Link>
+                <Link href="/events" className="dropdown-item">Events</Link>
+              </div>
+            )}
             <a href="#" onClick={handleScrollToInstitutes} className="mobile-nav-link">Participating Institutes</a>
             <Link href="https://www.indiascienceandtechnology.gov.in/st-visions/national-mission/national-mission-education-through-ict-nmeict" className="mobile-nav-link">NMEICT</Link>
             <Link href="/contact" className="mobile-nav-link">Contact Us</Link>
@@ -108,7 +122,7 @@ const Navbar = () => {
           .animate-loader {
             animation: loader 1.5s ease-in-out infinite alternate;
           }
-          
+
           .nav-link {
             position: relative;
             color: #1E3A8A;
@@ -128,7 +142,7 @@ const Navbar = () => {
           .nav-link:hover::after {
             width: 100%;
           }
-          
+
           .dropdown-item {
             display: block;
             padding: 10px;

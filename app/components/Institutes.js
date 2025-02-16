@@ -34,9 +34,9 @@ const Institutes = () => {
   };
 
   return (
-    <div id="institutes-section" className="py-24 px-12 relative bg-gray-50">
+    <div id="institutes-section" className="py-12 px-12 relative bg-gray-50 mb-12">
       {/* Section Header */}
-      <h2 className="text-5xl font-extrabold text-gray-700 tracking-tight text-center mb-16 text-sky-600">
+      <h2 className="text-5xl font-extrabold text-gray-700 tracking-tight text-center mb-8">
         Participating Institutes
       </h2>
 
